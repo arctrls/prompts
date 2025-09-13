@@ -27,6 +27,23 @@ These resources provide comprehensive patterns and best practices for extending 
 
 This repository is a comprehensive prompt engineering workspace for AI-assisted software development, with particular focus on Test-Driven Development (TDD) and Kent Beck's methodologies.
 
+## Code Style and Conventions
+
+This project follows strict Java code style guidelines to ensure consistency and maintainability:
+
+- **Comprehensive Guide**: See `claude/docs/CODE-STYLE-GUIDE.md` for detailed Java and Spring Framework coding standards
+- **Quick Reference Commands**: 
+  - `/blame-code-style` - For Java code style violations
+  - `/blame-spring` - For Spring Framework rule violations
+
+### Key Principles
+
+- **YAGNI**: Only implement features with clear usage requirements
+- **Record Style**: Use `xxx()` instead of `getXxx()` for all accessor methods
+- **Immutability**: All parameters and local variables must be `final`
+- **Package-by-Feature**: Organize code by business features, not technical layers
+- **DIP Compliance**: Depend on abstractions, not concrete implementations
+
 ### Directory Structure
 
 - **claude/**: Core prompt system organized into specialized components
