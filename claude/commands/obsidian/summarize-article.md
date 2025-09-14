@@ -14,15 +14,26 @@ color: yellow
 1. $ARGUMENTS 로 전달된 url의 문서를 broswermcp tool로 읽어서
    a. url에 접근할 때는 반드시 browsermcp tool을 사용해
    b. 로그인 등이 필요한 경우 fetch tool을 사용하면 url에 접근이 안될 수 있어
-2. 아래 규칙(`## 문서 번역 및 요약 규칙조`)에 따라 내용을 정리해서 yaml frontmatter를 포함한 obsidian file로
+2. 아티클 식별자 생성:
+   a. URL의 MD5 해시 앞 8자리 계산
+   b. 문서 제목에서 첫 3-4개 단어 추출 (특수문자는 하이픈으로 치환, 소문자로 변환)
+   c. `{해시8자리}_{제목단어들}` 형태로 article_id 생성
+   d. 예: `a3f2b8c1_java-design-patterns`
+3. 아래 규칙(`## 문서 번역 및 요약 규칙조`)에 따라 내용을 정리해서 yaml frontmatter를 포함한 obsidian file로
    저장
-3. hierarchical tagging 규칙은 `~/.claude/commands/obsidian/add-tag.md` 에 정의된 규칙을 준수
-4. 문서에 존재하는 이미지를 ATTACHMENTS 폴더에 저장하고, 이번에 작성하는 옵시디언 문서에 포함시켜줘. **이미지는 하나도 누락 없이 포함**되었으면 해
+4. hierarchical tagging 규칙은 `~/.claude/commands/obsidian/add-tag.md` 에 정의된 규칙을 준수
+5. 이미지 저장:
+   a. 문서에 존재하는 모든 이미지를 `ATTACHMENTS/articles/{article_id}/` 디렉토리에 저장
+   b. 디렉토리가 없으면 자동 생성
+   c. 이미지 파일명은 원본명 또는 순서대로 넘버링 (image001.png, image002.jpg 등)
+   d. Obsidian 문서에서 이미지 참조: `![[ATTACHMENTS/articles/{article_id}/imagename.ext]]`
+   e. **이미지는 하나도 누락 없이 포함**되었으면 해
 
 ## yaml frontmatter 예시
 
 ```yaml
 id: 10 Essential Software Design Patterns used in Java Core Libraries
+article_id: a3f2b8c1_essential-design-patterns
 aliases: Java 코어 라이브러리에서 사용되는 10가지 필수 소프트웨어 디자인 패턴
 tags:
   - patterns/design-patterns/java-implementation
@@ -40,6 +51,7 @@ source: https://azeynalli1990.medium.com/10-essential-software-design-patterns-u
 ```
 
 - id: 문서에서 발견한 제목
+- article_id: 2단계에서 생성한 아티클 식별자 (URL 해시 + 제목 조합)
 - aliases: 문서에서 발견한 제목의 한국어 번역
 - author: 문서에서 발견한 작성자 (작성자가 명확하지 않으면 공백). 이름은 다
   소문자, 공백은 '-'로 변경
