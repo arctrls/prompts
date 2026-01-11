@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRITICAL: Single Source of Truth
+
+**This project (`/Users/jazzbach/projects/prompts`) is the ONLY source of truth for Claude Code configuration.**
+
+- All changes MUST be made in this project FIRST
+- The home directory (`~/.claude/`) is synced FROM this project, never the reverse
+- When comparing directories: copy FROM this project TO home, never delete from this project
+- Git post-commit hook handles automatic sync to `~/.claude/`
+
+**Sync targets:** `claude/` directory contents → `~/.claude/` (agents, commands, docs, skills, obsidian-presets)
+
 ## Common Commands
 
 This repository contains no build system, but operates through prompt templates and configuration sync:
