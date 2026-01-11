@@ -9,12 +9,7 @@
   "mcpServers": {
     "atlassian": {
       "command": "npx",
-      "args": ["-y", "@anthropic/atlassian-mcp-server"],
-      "env": {
-        "JIRA_URL": "https://ktown4u.atlassian.net",
-        "JIRA_EMAIL": "jake@ktown4u.com",
-        "JIRA_API_TOKEN": "${JIRA_API_TOKEN}"
-      }
+      "args": ["-y", "mcp-remote@latest", "https://mcp.atlassian.com/v1/sse"]
     }
   }
 }
