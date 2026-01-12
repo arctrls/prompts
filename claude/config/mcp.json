@@ -14,6 +14,27 @@
         "NOTION_API_KEY": "${NOTION_API_KEY}"
       }
     },
+    "mysql-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.mysql-mcp-server@latest",
+        "--hostname",
+        "dev-20251223-cluster.cluster-ro-cn1xjryhj9xq.ap-northeast-2.rds.amazonaws.com",
+        "--secret_arn",
+        "arn:aws:secretsmanager:ap-northeast-2:170023315897:secret:database/mcp/dev/credentials-7bZ8iP",
+        "--database",
+        "hmmall",
+        "--region",
+        "ap-northeast-2",
+        "--readonly",
+        "True"
+      ],
+      "env": {
+        "AWS_PROFILE": "default",
+        "AWS_REGION": "ap-northeast-2",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    },
     "jetbrains": {
       "command": "npx",
       "args": [
