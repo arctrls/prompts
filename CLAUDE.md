@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - When comparing directories: copy FROM this project TO home, never delete from this project
 - Git post-commit hook handles automatic sync to `~/.claude/`
 
-**Sync targets:** `claude/` directory contents → `~/.claude/` (agents, commands, docs, skills, obsidian-presets)
+**Sync targets:** `claude/` directory contents → `~/.claude/` (agents, commands, config, docs, skills, obsidian-presets)
 
 ## Common Commands
 
