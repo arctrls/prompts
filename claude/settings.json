@@ -1,5 +1,4 @@
 {
-  "model": "opusplan",
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
