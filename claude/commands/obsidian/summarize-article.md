@@ -9,6 +9,11 @@ color: yellow
 
 지정된 문서를 읽고, 번역/정리해서 obsidian 문서를 생성합니다.
 
+## 필수 규칙
+
+**반드시 `~/.claude/docs/OBSIDIAN-RULES.md` 규칙을 준수하세요.**
+특히 `created_at` frontmatter 필드는 **절대 누락하면 안 됩니다**.
+
 ## 작업 프로세스
 
 1. $ARGUMENTS 로 전달된 url의 문서를 broswermcp tool로 읽어서
