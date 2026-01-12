@@ -9,7 +9,10 @@
       "args": [
         "-y",
         "@notionhq/mcp-server-notion"
-      ]
+      ],
+      "env": {
+        "NOTION_API_KEY": "${NOTION_API_KEY}"
+      }
     },
     "jetbrains": {
       "command": "npx",
@@ -47,7 +50,10 @@
         "-e",
         "GITHUB_PERSONAL_ACCESS_TOKEN",
         "ghcr.io/github/github-mcp-server"
-      ]
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
     },
     "sequential-thinking": {
       "command": "npx",
