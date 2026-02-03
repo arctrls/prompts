@@ -109,8 +109,8 @@
       "type": "http",
       "url": "https://mcp.datadoghq.com/api/unstable/mcp-server/mcp",
       "headers": {
-        "DD_API_KEY": "${DD_API_KEY}",
-        "DD_APPLICATION_KEY": "${DD_APPLICATION_KEY}"
+        "DD-API-KEY": "${DD_API_KEY}",
+        "DD-APPLICATION-KEY": "${DD_APP_KEY}"
       }
     }
   }
