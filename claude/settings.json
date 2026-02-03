@@ -4,6 +4,6 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "npx -y @owloops/claude-powerline@latest --config=~/.claude/claude-powerline.json"
+    "command": "bash ~/.claude/statusline-command.sh"
   }
 }
