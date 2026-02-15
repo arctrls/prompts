@@ -27,6 +27,9 @@ This repository contains no build system, but operates through prompt templates 
 # Git post-commit hook automatically syncs slash commands to ~/.claude
 git commit -m "Updated prompts"
 
+# Run sensitive data pre-check (recommended before commit)
+./scripts/check-sensitive-data.sh
+
 # Check project structure
 tree -d -L 3
 ```

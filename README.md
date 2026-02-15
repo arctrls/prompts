@@ -22,6 +22,15 @@
 ./scripts/sync-personal-config.sh --dry-run    # 반영 대상 미리보기
 ```
 
+민감정보 선제 점검:
+
+```bash
+./scripts/check-sensitive-data.sh           # tracked 파일에서 키/토큰 패턴 검출
+./scripts/check-sensitive-data.sh --warn-only # 발견되더라도 warning만 출력하고 통과
+```
+
+`check-sensitive-data.sh`는 커밋 직전이나 PR 전에 한 번 실행해서 우발적인 키 유출을 빠르게 잡는 용도로 사용하면 됩니다.
+
 ## 작성한 방법
 
 - prompt를 만들고,
