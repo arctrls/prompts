@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(cat:*)",
+      "Bash(./gradlew:*)",
+      "WebSearch",
+      "mcp__mysql-mcp-server__*",
+      "mcp__playwright__*"
+    ]
+  }
+}

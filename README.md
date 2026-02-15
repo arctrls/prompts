@@ -4,6 +4,24 @@
 - 많이 부족함에도 공유를 결정한 것은 공유를 통해 개선될 것이라는 생각이 있어서 입니다. 부족함을 이해해 주시고, 많은 도움 부탁드립니다.
 - Git post-commit hook이 설정되어 커밋 시 자동으로 slash commands가 ~/.claude에 동기화됩니다.
 
+## 개인 LLM 설정 소스코드 관리 (`~/.codex`, `~/.agents`)
+
+이 프로젝트는 개인 Codex 설정을 코드화해서 관리하는 소스 저장소입니다.
+
+- 관리 대상:
+  - `~/.codex`의 선언형 설정 (`config.toml`, `prompts`, `skills`)
+  - `~/.agents/skills`의 에이전트 규칙 (`SKILL.md`)
+- 제외 대상:
+  - `~/.omx` (세션 상태/로그/캐시)
+
+동기화 스크립트:
+
+```bash
+./scripts/sync-personal-config.sh      # .codex, .agents를 홈으로 반영
+./scripts/sync-personal-config.sh --from-home  # 홈 설정을 레포로 되돌리기
+./scripts/sync-personal-config.sh --dry-run    # 반영 대상 미리보기
+```
+
 ## 작성한 방법
 
 - prompt를 만들고,

@@ -1,0 +1,20 @@
+{
+  "agents": [
+    {
+      "name": "legacy-bo-analyzer",
+      "description": "C# BO 레거시 코드 분석 및 Mermaid 다이어그램 생성"
+    },
+    {
+      "name": "csharp-to-java-converter",
+      "description": "C# 코드를 Java로 변환 (CLAUDE.md 스타일 적용)"
+    },
+    {
+      "name": "migration-verifier",
+      "description": "마이그레이션 코드 동등성 검증"
+    },
+    {
+      "name": "migration-test-generator",
+      "description": "마이그레이션 코드 테스트 자동 생성"
+    }
+  ]
+}

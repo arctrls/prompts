@@ -4,14 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## CRITICAL: Single Source of Truth
 
-**This project (`/Users/jazzbach/projects/prompts`) is the ONLY source of truth for Claude Code configuration.**
+**This project (`/Users/jazzbach/projects/prompts`) is the ONLY source of truth for Claude Code and personal Codex configuration.**
 
 - All changes MUST be made in this project FIRST
 - The home directory (`~/.claude/`) is synced FROM this project, never the reverse
+- The home directories (`~/.codex/`, `~/.agents/`) are also synchronized FROM this project for declarative configuration
 - When comparing directories: copy FROM this project TO home, never delete from this project
 - Git post-commit hook handles automatic sync to `~/.claude/`
 
-**Sync targets:** `claude/` directory contents → `~/.claude/` (agents, commands, config, docs, skills, obsidian-presets)
+**Claude sync targets:** `claude/` directory contents → `~/.claude/` (agents, commands, config, docs, skills, obsidian-presets)
+**Codex sync targets:** `codex/` directory contents → `~/.codex/` (config.toml, prompts, skills)
+**Agents sync targets:** `agents/` directory contents → `~/.agents/` (agent skills)
+**Excluded from version control:** `~/.omx` (runtime state, logs, and sessions only)
+
+Use `./scripts/sync-personal-config.sh` to sync these personal config directories.
 
 ## Common Commands
 

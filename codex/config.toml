@@ -1,0 +1,44 @@
+# oh-my-codex top-level settings (must be before any [table])
+notify = [
+  "node",
+  "/Users/jazzbach/Library/pnpm/global/5/.pnpm/oh-my-codex@0.3.8/node_modules/oh-my-codex/scripts/notify-hook.js",
+]
+model_reasoning_effort = "high"
+developer_instructions = "You have oh-my-codex installed. Use /prompts:architect, /prompts:executor, /prompts:planner for specialized agent roles. Workflow skills via $name: $ralph, $autopilot, $plan. AGENTS.md is your orchestration brain."
+suppress_unstable_features_warning = true
+
+model = "gpt-5.3-codex-spark"
+[projects."/Users/jazzbach/projects/thomas"]
+trust_level = "trusted"
+
+[projects."/Users/jazzbach/Library/Mobile Documents/iCloud~md~obsidian/Documents/jazzbach"]
+trust_level = "trusted"
+
+[projects."/Users/jazzbach/obsidian"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.3-codex"
+
+[features]
+collab = true
+child_agents_md = true
+
+# ============================================================
+# oh-my-codex (OMX) Configuration
+# Managed by omx setup - manual edits preserved on next setup
+# ============================================================
+
+# OMX State Management MCP Server
+[tui]
+status_line = [
+  "model-with-reasoning",
+  "git-branch",
+  "context-remaining",
+  "total-input-tokens",
+  "total-output-tokens",
+  "five-hour-limit",
+]
+
+# ============================================================
+# End oh-my-codex

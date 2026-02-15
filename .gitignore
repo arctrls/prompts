@@ -3,3 +3,4 @@
 ignored/**
 claude/commands/sc
 .claude
+.omx
